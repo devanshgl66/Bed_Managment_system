@@ -1,0 +1,24 @@
+.example-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.form-container {
+  width: 500px;
+  margin: 0 auto;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.form-field {
+  display: block;
+}
+
+.button-type {
+  margin: 10px;
+}
+.flexField {
+  display: flex;
+  justify-content: space-between;
+}

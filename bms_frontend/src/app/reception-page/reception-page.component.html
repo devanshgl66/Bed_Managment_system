@@ -1,0 +1,75 @@
+<div class="example-container">
+  <div class="form-container">
+    <h1>Patient Detail Form</h1>
+    <form [formGroup]="patientDetailsForm">
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Patient Id</mat-label>
+        <input matInput formControlName="patientId" type="text" />
+        <mat-error
+          *ngIf="
+            patientDetailsForm.controls['patientId'].touched &&
+            patientDetailsForm.controls['patientId'].invalid
+          "
+        >
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="fname" [(ngModel)]="fname" />
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="lname" [(ngModel)]="lname" />
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Allocation Type</mat-label>
+        <input matInput formControlName="allocationType" type="text" />
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <input matInput [matDatepicker]="picker" placeholder="Select a date" />
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <!-- <mat-label>Requested Date</mat-label>
+        <input matInput formControlName="requestedDate" type="date" /> -->
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Requested Time</mat-label>
+        <input matInput [ngxTimepicker]="time" placeholder="Select a time" />
+        <ngx-material-timepicker #time></ngx-material-timepicker>
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Requested By</mat-label>
+        <input matInput formControlName="requestedBy" type="text" />
+      </mat-form-field>
+      <div class="flexField">
+        <mat-form-field appearance="outline">
+          <mat-label>Ward Type</mat-label>
+          <mat-select formControlName="ward">
+            <mat-option *ngFor="let ward of wards" [value]="ward.value">
+              {{ ward.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Priority</mat-label>
+          <mat-select formControlName="priority">
+            <mat-option *ngFor="let p of priority" [value]="p.value">
+              {{ p.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        (click)="onSubmit()"
+      >
+        Request
+      </button>
+    </form>
+  </div>
+</div>
