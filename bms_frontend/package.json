@@ -1,0 +1,17 @@
+{
+  "name": "bms_frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/animations": "^15.0.4",
+    "@angular/cdk": "^15.0.3",
+    "@angular/material": "^15.0.3",
+    "angular-material-clock-time-picker": "^0.0.8"
+  }
+}
