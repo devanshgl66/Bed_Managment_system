@@ -1,0 +1,12 @@
+Steps to use BMS:
+    1.Install apache superset into the machine.
+    Use this link for step by step instructions.
+    https://superset.apache.org/docs/installation/installing-superset-from-scratch/
+    2.Install postgresql into the machine.
+    3.Clone this repo.
+    4.Execute DB.sql into postgresql.
+    5.Start the superset server.
+    6.Config/Connect database to superset.
+    7.Import datasets,charts, dashboard from git repo.
+    Note:Ensure local dataset and database in the superset configuration.
+    
